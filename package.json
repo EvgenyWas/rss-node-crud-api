@@ -8,8 +8,8 @@
     "node": ">=22.9.0"
   },
   "scripts": {
-    "build:prod": "webpack --mode production",
     "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
     "build:multi": "webpack --mode development",
     "start:dev": "nodemon",
     "start:prod": "npm run build:prod && node dist/main.js",

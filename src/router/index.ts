@@ -9,7 +9,7 @@ class Router {
   private _base: string;
   private _routes: Record<RouterMethods, Routes>;
 
-  constructor(base: string = '') {
+  constructor(base: string = '/api') {
     this._base = base;
     this._routes = {
       GET: {},
