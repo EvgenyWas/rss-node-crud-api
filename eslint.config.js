@@ -1,5 +1,5 @@
 import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import tsEslint from 'typescript-eslint';
 
 export default [
   {
@@ -19,5 +19,5 @@ export default [
   },
   { ignores: ['node_modules', 'dist/*'] },
   pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tsEslint.configs.recommended,
 ];

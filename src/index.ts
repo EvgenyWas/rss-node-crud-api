@@ -8,6 +8,8 @@ import router from './router';
 import { createServer } from './server';
 import { createError } from './utils';
 
+const PORT = process.env.PORT || 4000;
+
 if (process.env.MULTI === 'true') {
   if (cluster.isPrimary) {
     createLoadBalancer();
@@ -29,5 +31,7 @@ if (process.env.MULTI === 'true') {
       });
   }
 } else {
-  createServer();
+  createServer().listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+  });
 }
